@@ -26,4 +26,11 @@ class AuthSwagger
         responses: [new OA\Response(response: 200, description: 'User profile')])]
     public function me(): void {}
 
+    #[OA\Put(path: '/api/auth/me', summary: 'Update name and/or email', tags: ['Auth'], security: [['bearerAuth' => []]],
+        responses: [new OA\Response(response: 200, description: 'Updated profile'), new OA\Response(response: 422, description: 'Validation error')])]
+    public function updateProfile(): void {}
+
+    #[OA\Put(path: '/api/auth/password', summary: 'Change password', tags: ['Auth'], security: [['bearerAuth' => []]],
+        responses: [new OA\Response(response: 204, description: 'Password changed'), new OA\Response(response: 422, description: 'Wrong current password')])]
+    public function changePassword(): void {}
 }

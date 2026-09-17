@@ -11,3 +11,5 @@ Route::post('auth/login', [AuthController::class, 'login'])->middleware('throttl
 Route::post('auth/refresh', [AuthController::class, 'refresh']);
 Route::post('auth/logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::get('auth/me', [AuthController::class, 'me'])->middleware('auth');
+Route::put('auth/me', [AuthController::class, 'updateProfile'])->middleware('auth');
+Route::put('auth/password', [AuthController::class, 'changePassword'])->middleware('auth');

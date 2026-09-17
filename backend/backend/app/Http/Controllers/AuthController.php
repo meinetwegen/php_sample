@@ -56,6 +56,20 @@ class AuthController extends Controller
         return new UserResource($request->user());
     }
 
+    public function updateProfile(UpdateProfileRequest $request): UserResource
+    {
+        $request->user()->update($request->validated());
+
+        return new UserResource($request->user()->fresh());
+    }
+
+    public function changePassword(ChangePasswordRequest $request): Response
+    {
+        $request->user()->update(['password' => $request->validated('new_password')]);
+
+        return response()->noContent();
+    }
+
     private function guard(): JWTGuard
     {
         return auth('api');
