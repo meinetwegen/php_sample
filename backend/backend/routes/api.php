@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MagazineController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('health', fn () => response()->json(['status' => 'ok']));
@@ -13,3 +15,8 @@ Route::post('auth/logout', [AuthController::class, 'logout'])->middleware('auth'
 Route::get('auth/me', [AuthController::class, 'me'])->middleware('auth');
 Route::put('auth/me', [AuthController::class, 'updateProfile'])->middleware('auth');
 Route::put('auth/password', [AuthController::class, 'changePassword'])->middleware('auth');
+
+// Public catalog
+Route::get('categories', [CategoryController::class, 'index']);
+Route::get('magazines', [MagazineController::class, 'index']);
+Route::get('magazines/{magazine}', [MagazineController::class, 'show']);
