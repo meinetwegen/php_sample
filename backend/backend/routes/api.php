@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MagazineController;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,10 @@ Route::put('auth/password', [AuthController::class, 'changePassword'])->middlewa
 Route::get('categories', [CategoryController::class, 'index']);
 Route::get('magazines', [MagazineController::class, 'index']);
 Route::get('magazines/{magazine}', [MagazineController::class, 'show']);
+
+// Cart
+Route::get('cart', [CartController::class, 'show'])->middleware('auth');
+Route::post('cart', [CartController::class, 'store'])->middleware('auth');
+Route::delete('cart', [CartController::class, 'clear'])->middleware('auth');
+Route::put('cart/{magazine}', [CartController::class, 'update'])->middleware('auth');
+Route::delete('cart/{magazine}', [CartController::class, 'destroy'])->middleware('auth');
