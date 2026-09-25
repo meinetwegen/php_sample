@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\Admin\MagazineController as AdminMagazineController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
+use App\Http\Controllers\Admin\StatsController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
@@ -36,3 +40,15 @@ Route::post('orders', [OrderController::class, 'store'])->middleware('auth');
 Route::get('orders/{order}', [OrderController::class, 'show'])->middleware('auth');
 Route::post('orders/{order}/pay', [OrderController::class, 'pay'])->middleware('auth');
 Route::post('orders/{order}/cancel', [OrderController::class, 'cancel'])->middleware('auth');
+
+// Admin
+Route::get('admin/stats', StatsController::class)->middleware(['auth', 'admin']);
+Route::get('admin/magazines', [AdminMagazineController::class, 'index'])->middleware(['auth', 'admin']);
+Route::post('admin/magazines', [AdminMagazineController::class, 'store'])->middleware(['auth', 'admin']);
+Route::put('admin/magazines/{magazine}', [AdminMagazineController::class, 'update'])->middleware(['auth', 'admin']);
+Route::delete('admin/magazines/{magazine}', [AdminMagazineController::class, 'destroy'])->middleware(['auth', 'admin']);
+Route::post('admin/categories', [AdminCategoryController::class, 'store'])->middleware(['auth', 'admin']);
+Route::put('admin/categories/{category}', [AdminCategoryController::class, 'update'])->middleware(['auth', 'admin']);
+Route::delete('admin/categories/{category}', [AdminCategoryController::class, 'destroy'])->middleware(['auth', 'admin']);
+Route::get('admin/orders', [AdminOrderController::class, 'index'])->middleware(['auth', 'admin']);
+Route::patch('admin/orders/{order}/status', [AdminOrderController::class, 'updateStatus'])->middleware(['auth', 'admin']);
