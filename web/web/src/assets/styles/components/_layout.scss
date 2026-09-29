@@ -1,0 +1,47 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .9rem 2rem;
+  background: #1d1d1b;
+
+  a { color: #e8e8e4; }
+  &__brand { font-size: 1.2rem; font-weight: 700; }
+  &__nav { display: flex; align-items: center; gap: 1.2rem; font-size: .95rem; .is-active { font-weight: 700; color: #fff; } }
+  &__cart { display: inline-flex; align-items: center; gap: .3rem; }
+}
+
+.page { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+
+.auth-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  &__brand { font-size: 1.5rem; font-weight: 700; color: #1d1d1b; }
+  &__card { width: 380px; max-width: 92vw; }
+}
+
+.admin-layout {
+  min-height: 100vh;
+
+  &__aside { background: #fff; border-right: 1px solid #e4e4e0; }
+  &__brand { padding: 1.2rem; font-weight: 700; }
+  &__main { padding: 2rem; }
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  &__label { color: #777; font-size: .85rem; }
+  &__value { font-size: 1.6rem; font-weight: 700; margin-top: .3rem; }
+}
+
+.dashboard-block { margin-bottom: 1.5rem; }
+.revenue-chart { height: 280px; }

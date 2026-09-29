@@ -1,0 +1,44 @@
+{
+  "app": { "title": "Магазин журналов" },
+  "common": { "save": "Сохранить", "edit": "Изменить", "delete": "Удалить", "yes": "Да", "no": "Нет" },
+  "nav": { "catalog": "Каталог", "orders": "Мои заказы", "admin": "Админка", "login": "Войти", "register": "Регистрация", "logout": "Выйти" },
+  "auth": {
+    "login": "Вход", "register": "Создать аккаунт", "email": "Email", "password": "Пароль", "name": "Имя",
+    "noAccount": "Ещё нет аккаунта?", "haveAccount": "Уже зарегистрированы?", "loggingOut": "Выходим…"
+  },
+  "formats": { "print": "Печатный", "digital": "Цифровой", "both": "Печатный + цифровой" },
+  "sorts": { "newest": "Сначала новые", "price_asc": "Цена: по возрастанию", "price_desc": "Цена: по убыванию", "title": "Название А–Я" },
+  "catalog": {
+    "title": "Журналы", "search": "Поиск…", "category": "Категория", "format": "Формат", "sort": "Сортировка",
+    "empty": "Журналы не найдены", "addToCart": "В корзину", "added": "Добавлено в корзину", "outOfStock": "Нет в наличии",
+    "inStock": "В наличии: {count}"
+  },
+  "cart": {
+    "title": "Корзина", "empty": "Корзина пуста", "magazine": "Журнал", "price": "Цена", "quantity": "Количество",
+    "lineTotal": "Сумма", "remove": "Убрать", "summary": "Итого", "subtotal": "Товары", "shipping": "Доставка",
+    "free": "Бесплатно", "total": "К оплате"
+  },
+  "checkout": {
+    "title": "Доставка и оплата", "name": "ФИО", "address": "Адрес", "city": "Город", "zip": "Индекс",
+    "country": "Страна", "payment": "Способ оплаты", "card": "Картой", "cash_on_delivery": "Наложенный платёж",
+    "placeOrder": "Оформить заказ", "success": "Заказ оформлен"
+  },
+  "orders": {
+    "title": "Мои заказы", "empty": "Заказов пока нет", "number": "Заказ", "date": "Дата", "status": "Статус",
+    "payment": "Оплата", "total": "Сумма", "pay": "Оплатить", "cancel": "Отменить", "paid": "Оплачен", "pending": "Не оплачен"
+  },
+  "statuses": {
+    "all": "Все", "pending": "Ожидает", "processing": "В обработке", "shipped": "Отправлен", "delivered": "Доставлен", "cancelled": "Отменён"
+  },
+  "admin": {
+    "dashboard": "Дашборд", "magazines": "Журналы", "categories": "Категории", "orders": "Заказы",
+    "backToShop": "В магазин", "new": "Добавить", "deactivate": "Скрыть", "revenue14": "Выручка за 14 дней",
+    "lowStock": "Заканчиваются", "noLowStock": "Остатков достаточно",
+    "confirmDelete": "Удалить «{name}»?", "confirmDeactivate": "Скрыть «{name}»? Журнал пропадёт из каталога.",
+    "stats": { "revenue": "Выручка", "orders": "Заказы", "users": "Покупатели", "magazines": "Активные журналы" },
+    "fields": {
+      "name": "Название", "title": "Заголовок", "issue": "Номер", "description": "Описание", "price": "Цена (EUR)", "stock": "Остаток",
+      "format": "Формат", "category": "Категория", "cover": "URL обложки", "published": "Дата выхода", "active": "Активен"
+    }
+  }
+}

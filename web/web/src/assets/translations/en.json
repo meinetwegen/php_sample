@@ -1,0 +1,44 @@
+{
+  "app": { "title": "Magazine Shop" },
+  "common": { "save": "Save", "edit": "Edit", "delete": "Delete", "yes": "Yes", "no": "No" },
+  "nav": { "catalog": "Catalog", "orders": "My orders", "admin": "Admin", "login": "Log in", "register": "Sign up", "logout": "Log out" },
+  "auth": {
+    "login": "Log in", "register": "Create account", "email": "Email", "password": "Password", "name": "Name",
+    "noAccount": "No account yet?", "haveAccount": "Already registered?", "loggingOut": "Logging out…"
+  },
+  "formats": { "print": "Print", "digital": "Digital", "both": "Print + digital" },
+  "sorts": { "newest": "Newest first", "price_asc": "Price: low to high", "price_desc": "Price: high to low", "title": "Title A–Z" },
+  "catalog": {
+    "title": "Magazines", "search": "Search…", "category": "Category", "format": "Format", "sort": "Sort by",
+    "empty": "No magazines found", "addToCart": "Add to cart", "added": "Added to cart", "outOfStock": "Out of stock",
+    "inStock": "{count} in stock"
+  },
+  "cart": {
+    "title": "Your cart", "empty": "Your cart is empty", "magazine": "Magazine", "price": "Price", "quantity": "Quantity",
+    "lineTotal": "Total", "remove": "Remove", "summary": "Summary", "subtotal": "Subtotal", "shipping": "Shipping",
+    "free": "Free", "total": "Total"
+  },
+  "checkout": {
+    "title": "Delivery and payment", "name": "Full name", "address": "Address", "city": "City", "zip": "Postal code",
+    "country": "Country", "payment": "Payment method", "card": "Card", "cash_on_delivery": "Cash on delivery",
+    "placeOrder": "Place order", "success": "Order placed"
+  },
+  "orders": {
+    "title": "My orders", "empty": "No orders yet", "number": "Order", "date": "Date", "status": "Status",
+    "payment": "Payment", "total": "Total", "pay": "Pay", "cancel": "Cancel", "paid": "Paid", "pending": "Unpaid"
+  },
+  "statuses": {
+    "all": "All", "pending": "Pending", "processing": "Processing", "shipped": "Shipped", "delivered": "Delivered", "cancelled": "Cancelled"
+  },
+  "admin": {
+    "dashboard": "Dashboard", "magazines": "Magazines", "categories": "Categories", "orders": "Orders",
+    "backToShop": "Back to shop", "new": "New", "deactivate": "Deactivate", "revenue14": "Revenue, last 14 days",
+    "lowStock": "Low stock", "noLowStock": "Everything is well stocked",
+    "confirmDelete": "Delete “{name}”?", "confirmDeactivate": "Deactivate “{name}”? It disappears from the catalog.",
+    "stats": { "revenue": "Revenue", "orders": "Orders", "users": "Customers", "magazines": "Active magazines" },
+    "fields": {
+      "name": "Name", "title": "Title", "issue": "Issue", "description": "Description", "price": "Price (EUR)", "stock": "Stock",
+      "format": "Format", "category": "Category", "cover": "Cover URL", "published": "Published", "active": "Active"
+    }
+  }
+}
