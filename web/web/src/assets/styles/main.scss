@@ -1,4 +1,6 @@
 @use 'components/layout';
+@use 'components/catalog';
+
 :root { color-scheme: light; }
 body { margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: #f6f5f1; color: #1d1d1b; }
 a { color: #3b5bdb; text-decoration: none; }
