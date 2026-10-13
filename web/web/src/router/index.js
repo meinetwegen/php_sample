@@ -2,9 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import store from '@/store'
 import authRoutes from './apps/auth'
 import shopRoutes from './apps/shop'
+import adminRoutes from './apps/admin'
+
 const routes = []
 routes.push(...authRoutes)
 routes.push(...shopRoutes)
+routes.push(...adminRoutes)
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
