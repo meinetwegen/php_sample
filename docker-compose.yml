@@ -1,0 +1,38 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      APP_ENV: production
+      APP_DEBUG: ${APP_DEBUG:-false}
+      APP_KEY: ${APP_KEY:?copy .env.example to .env and set APP_KEY}
+      JWT_SECRET: ${JWT_SECRET:?copy .env.example to .env and set JWT_SECRET}
+      DB_CONNECTION: sqlite
+      DB_DATABASE: /var/www/html/storage/database/database.sqlite
+      LOG_CHANNEL: stderr
+      SEED_DATABASE: ${SEED_DATABASE:-false}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      L5_SWAGGER_GENERATE_ALWAYS: "false"
+    volumes:
+      - backend_data:/var/www/html/storage/database
+    ports:
+      - "${BACKEND_PORT:-8000}:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/api/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  web:
+    build: ./web
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    restart: unless-stopped
+
+volumes:
+  backend_data:

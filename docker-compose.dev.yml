@@ -1,0 +1,17 @@
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+services:
+  backend:
+    environment:
+      APP_DEBUG: "true"
+
+  web:
+    build:
+      context: ./web
+      target: dev
+    environment:
+      VUE_APP_PROXY_TARGET: http://backend:80
+    volumes:
+      - ./web/web:/app
+      - /app/node_modules
+    ports:
+      - "8081:8080"
