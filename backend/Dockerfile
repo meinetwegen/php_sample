@@ -6,7 +6,7 @@ RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --no-in
 COPY backend/ ./
 RUN composer dump-autoload --no-dev --optimize --no-scripts
 
-FROM php:8.3-fpm-alpine
+FROM php:8.4-fpm-alpine
 RUN apk add --no-cache nginx supervisor \
     && docker-php-ext-install pdo_mysql opcache
 
